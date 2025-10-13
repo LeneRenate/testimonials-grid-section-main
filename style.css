@@ -1,0 +1,140 @@
+:root {
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: barlow semi condensed, sans-serif;
+  font-size: 13px;
+}
+
+/* 
+article #[name]
+img
+h2 .name
+p .graduate
+p .bold
+p 
+*/
+
+img {
+  border-radius: 50%;
+}
+
+#Daniel {
+  background-color: var(--purple-500);
+}
+
+#Jonathan {
+  background-color: var(--grey-500);
+}
+
+#Jeanette {
+  background-color: var(--white);
+}
+
+#Patrick {
+  background-color: var(--black);
+}
+
+#Kira {
+  background-color: var(--white);
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+For @media:
+Desktop: 1440px
+Mobile: 375px
+But test according to WCAG, from 320px up to large screens
+*/
